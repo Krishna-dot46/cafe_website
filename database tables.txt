@@ -1,0 +1,60 @@
+CREATE TABLE users (
+id SERIAL PRIMARY KEY,
+name VARCHAR(100),
+email VARCHAR(100) UNIQUE,
+password VARCHAR(255)
+);
+
+drop table users;
+select * from users;
+
+CREATE TABLE menu(
+id SERIAL PRIMARY KEY,
+name VARCHAR(100),
+price INT,
+image TEXT,
+category VARCHAR(50)
+);
+ALTER TABLE menu
+ADD COLUMN description TEXT;
+
+ALTER TABLE menu
+ADD COLUMN category VARCHAR(50);
+
+ALTER TABLE menu
+DROP COLUMN image;
+
+drop table menu;
+
+select * from menu;
+
+CREATE TABLE reservations(
+id SERIAL PRIMARY KEY,
+name VARCHAR(100),
+email VARCHAR(100),
+date DATE,
+time TIME,
+persons INT
+);
+
+ALTER TABLE reservations 
+ADD COLUMN phone VARCHAR(20),
+ADD COLUMN message TEXT;
+
+select * from reservations;
+
+DELETE FROM reservations;
+
+CREATE TABLE contact(
+id SERIAL PRIMARY KEY,
+name VARCHAR(100),
+email VARCHAR(100),
+subject VARCHAR(200),
+message TEXT
+);
+
+select * from contact;
+
+admin user name: "admin@gmail.com"
+admin password : "Admin123"
+
